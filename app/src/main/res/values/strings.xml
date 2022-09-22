@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">What Day</string>
+  <string name="date_label">Date (1 or 2 digits)</string>
+  <string name="month_label">Month (1 or 2 digits)</string>
+  <string name="year_label">Year (4 digits)</string>
+  <string name="check">Check</string>
+  <string name="placeholder">Placeholder</string>
+</resources>
