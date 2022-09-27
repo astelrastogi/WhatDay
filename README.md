@@ -31,7 +31,7 @@ This app takes input from the user for a date, and displays the day for that par
 
 ## A.d - Testing
 
-Used Test-Driven Approach for coding up the project. Added 2 more unit test cases. 
+Used Test-Driven Approach for coding up the project. Added 2 more unit test cases. They are as follows - 
 ```
 @Test
 public void Jan1_2023_Sunday() {
@@ -45,6 +45,7 @@ public void Feb29_1900_isNotAvailable() {
   assertThat(DateModel.getMessage(), is("February of 1900 does not have 29 days"));
 }
 ```
+The instrumented test cases were tested on a physical Android mobile, since the emulator took too long to start. 
 ## A.e - Time Taken
 It took about 6 hours to complete the whole assignment. 
 ## A.f - Assignment Difficulty
