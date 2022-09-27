@@ -23,9 +23,18 @@ This app takes input from the user for a date, and displays the day for that par
 ## A.c - How I completed Tasks
 
 ### Task1
+The `setOnClickListener` on Check button calls `initialize()` method first. It then calls `getMessage()` which then prints the string output on the screen. 
 
+`initialise` ->
+
+`getMessage` ->
+
+#### Note
+
+Used `calendar.setLenient(false);` for
 
 ###  Task2
+Removed `android:inputType="date"` from `activity_main.xml` file for modifying the method of input. Earlier only keyboard with numbers used to appear. After removing this line, user can give string input. For example "four" instead of 4. The app will display invalid input method for string inputs.
 
 ###  Task3
 
@@ -45,7 +54,8 @@ public void Feb29_1900_isNotAvailable() {
   assertThat(DateModel.getMessage(), is("February of 1900 does not have 29 days"));
 }
 ```
-The instrumented test cases were tested on a physical Android mobile, since the emulator took too long to start. 
+Since the emulator took too long to start, the instrumented test cases were tested on a physical Android mobile. 
+
 ## A.e - Time Taken
 It took about 6 hours to complete the whole assignment. 
 ## A.f - Assignment Difficulty
