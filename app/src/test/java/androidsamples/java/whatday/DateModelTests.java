@@ -59,5 +59,4 @@ public class DateModelTests {
     assertThat(DateModel.getMessage(), is("February of 1900 does not have 29 days"));
   }
 
-
 }
