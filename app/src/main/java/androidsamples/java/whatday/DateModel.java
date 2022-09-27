@@ -17,6 +17,16 @@ public class DateModel {
   static int []numDaysInMonth = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
   static String []mapIndToDay = new String[]{"", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
+  /**
+   * Initializes the {@link DateModel} with the given year, month, and date.
+   * If the date is not valid, it sets the appropriate error message.
+   * If it is valid, it sets the appropriate day of the week message.
+   *
+   * @param yearStr  a {@code String} representing the year, e.g., "1947"
+   * @param monthStr a {@code String} representing the month, e.g., "8"
+   * @param dateStr  a {@code String} representing the date, e.g., "15"
+   */
+
   public static void initialize(String yearStr, String monthStr, String dateStr) {
     // TODO implement the method to match the description
 
@@ -63,6 +73,13 @@ public class DateModel {
     else return false;
   }
 
+  /**
+   * Retrieves the message from the {@link DateModel}.
+   * It can be an error message like "February of 2019 does not have 29 days"
+   * or a success message like "Friday".
+   *
+   * @return the message from the model
+   */
   @NonNull
   public static String getMessage() {
     // TODO implement the method to match the description
