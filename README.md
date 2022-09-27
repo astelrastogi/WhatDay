@@ -44,7 +44,7 @@ Creates `GregorianCalendar` object with given date and returns the index of week
 
 #### Note
 
-Used `calendar.setLenient(false)` for strict matching. If set to true (which is by default), Calendar will intelligently guess the possible day even if the input is not in correct format.
+Used `calendar.setLenient(false)` for strict matching. If set to true (which is by default), Calendar will intelligently guess the possible day even if the input is not in correct format, whereas we don't want that.
 
 ###  Task2
 Removed `android:inputType="date"` from `activity_main.xml` file for modifying the method of input. Earlier only keyboard with numbers used to appear. After removing this line, user can give string input. For example "four" instead of 4. The app will display invalid input method for string inputs.
