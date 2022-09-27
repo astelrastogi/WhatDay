@@ -16,7 +16,7 @@ Email - f20190175@goa.bits-pilani.ac.in
 
 ## A.b - App Description
 
-This app takes input from the user for a date, and displays the day for that particular date. If the input is invalid, i.e. not in DD-MM-YYYY format, it displays that the input is valid. 
+This app takes input from the user for a date, and displays the day for that particular date. If the input is invalid, i.e. not in DD-MM-YYYY format, it displays that the input is invalid. The display message is customised for different cases of invalid inputs. For example if user enters 31-09-2903, it will display "This month doesn't have 31 days".
 
 ### Known Bugs
 
@@ -27,18 +27,31 @@ The text doesn't clear itself after Check button is clicked once. For next input
 ### Task1
 The `setOnClickListener` on Check button calls `initialize()` method first. It then calls `getMessage()` which then prints the string output on the screen. 
 
-`initialise` ->
+`initialise()` -> 
 
-`getMessage` ->
+uses a try - catch block to check if there's some parsing error, i.e. if the input is not an integer, it's not a valid input. 
+
+`getMessage()` -> 
+
+1. Validates the entered month
+2. Handles the corner case for date in February (leap year/non-leap year)
+3. Validates the date entered
+4. Calls `getDay()`
+
+`getDay()` -> 
+
+Creates `GregorianCalendar` object with given date and returns the index of week. The exact day name extracted from the `mapIndToDay` array and index. 
 
 #### Note
 
-Used `calendar.setLenient(false);` for
+Used `calendar.setLenient(false)` for strict matching. If set to true (which is by default), Calendar will intelligently guess the possible day even if the input is not in correct format.
 
 ###  Task2
 Removed `android:inputType="date"` from `activity_main.xml` file for modifying the method of input. Earlier only keyboard with numbers used to appear. After removing this line, user can give string input. For example "four" instead of 4. The app will display invalid input method for string inputs.
 
 ###  Task3
+
+Talkback repeats the entered digit twice, which makes entering the exact date confusing. For example, if we write 2 as the date of the month, talkback repeats it and it seems we've entered 22 as the date of month. Moreover, Talkback doesn't automatically read out the display text after check button has been clicked. 
 
 ## A.d - Testing
 
