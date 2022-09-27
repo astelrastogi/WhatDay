@@ -20,6 +20,8 @@ This app takes input from the user for a date, and displays the day for that par
 
 ### Known Bugs
 
+The text doesn't clear itself after Check button is clicked once. For next input user has to clear the previous values to enter new ones. 
+
 ## A.c - How I completed Tasks
 
 ### Task1
