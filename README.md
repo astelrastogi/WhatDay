@@ -16,7 +16,7 @@ Email - f20190175@goa.bits-pilani.ac.in
 
 ## A.b - App Description
 
-This app 
+This app takes input from the user for a date, and displays the day for that particular date. If the input is invalid, i.e. not in DD-MM-YYYY format, it displays that the input is valid. 
 
 ### Known Bugs
 
@@ -24,12 +24,27 @@ This app
 
 ### Task1
 
+
 ###  Task2
 
 ###  Task3
 
 ## A.d - Testing
 
+Used Test-Driven Approach for coding up the project. Added 2 more unit test cases. 
+```
+@Test
+public void Jan1_2023_Sunday() {
+  DateModel.initialize("2023", "1", "1");
+  assertThat(DateModel.getMessage(), is("Sunday"));
+}
+
+@Test
+public void Feb29_1900_isNotAvailable() {
+  DateModel.initialize("1900", "02", "29");
+  assertThat(DateModel.getMessage(), is("February of 1900 does not have 29 days"));
+}
+```
 ## A.e - Time Taken
 
 ## A.f - Assignment Difficulty
