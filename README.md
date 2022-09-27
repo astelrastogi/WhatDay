@@ -46,6 +46,6 @@ public void Feb29_1900_isNotAvailable() {
 }
 ```
 ## A.e - Time Taken
-
+It took about 6 hours to complete the whole assignment. 
 ## A.f - Assignment Difficulty
-
+4, on a scale of 1-10, where the 10 is the highest difficulty level. 
