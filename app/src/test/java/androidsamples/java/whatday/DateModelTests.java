@@ -44,4 +44,20 @@ public class DateModelTests {
     DateModel.initialize("2022", "1", "1");
     assertThat(DateModel.getMessage(), is("Saturday"));
   }
+
+  // Extra test cases
+
+  @Test
+  public void Jan1_2023_Sunday() {
+    DateModel.initialize("2023", "1", "1");
+    assertThat(DateModel.getMessage(), is("Sunday"));
+  }
+
+  @Test
+  public void Feb29_1900_isNotAvailable() {
+    DateModel.initialize("1900", "02", "29");
+    assertThat(DateModel.getMessage(), is("February of 1900 does not have 29 days"));
+  }
+
+
 }
