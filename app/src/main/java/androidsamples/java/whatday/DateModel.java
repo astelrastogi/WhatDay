@@ -66,7 +66,7 @@ public class DateModel {
   @NonNull
   public static String getMessage() {
     // TODO implement the method to match the description
-    if(!isValidYear || !isValidMonth || !isValidYear) {
+    if(!isValidYear || !isValidMonth || !isValidDate) {
       return "Enter values in a proper numeric format";
     }
 
@@ -83,17 +83,18 @@ public class DateModel {
     // February
     if(month == 2) {
 
-      if(!isLeap && date == 29) {
+      if(date > 29) {
+        return "This month does not have " + date + " days";
+      }
+
+      else if(!isLeap && date == 29) {
         return "February of " + year + " does not have 29 days";
       }
 
-      else if(isLeap && date == 29) {
+      else {
         return getDay();
       }
 
-      else {
-        return "This month does not have " + date + " days";
-      }
     }
 
     // Validate Date
