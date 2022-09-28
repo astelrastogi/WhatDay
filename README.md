@@ -86,6 +86,6 @@ public void Feb29_1900_isNotAvailable() {
 Since the emulator took too long to start, the instrumented test cases were tested on a physical Android mobile. 
 
 ## A.e - Time Taken
-It took about 6 hours to complete the whole assignment. 
+It took about 10 hours to complete the whole assignment. 
 ## A.f - Assignment Difficulty
 4, on a scale of 1-10, where the 10 is the highest difficulty level. 
