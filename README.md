@@ -49,9 +49,17 @@ Used `calendar.setLenient(false)` for strict matching. If set to true (which is 
 ###  Task2
 Removed `android:inputType="date"` from `activity_main.xml` file for modifying the method of input. Earlier only keyboard with numbers used to appear. After removing this line, user can give string input. For example "four" instead of 4. The app will display invalid input method for string inputs.
 
+Also, increased the height of textview inputs to `48dp` from `45dp` as per Accessibility Scanner suggestion. 
+
 ###  Task3
 
-Talkback repeats the entered digit twice, which makes entering the exact date confusing. For example, if we write 2 as the date of the month, talkback repeats it and it seems we've entered 22 as the date of month. Moreover, Talkback doesn't automatically read out the display text after check button has been clicked. 
+#### Talkback 
+
+It repeats the entered digit twice, which makes entering the exact date confusing. For example, if we write 2 as the date of the month, talkback repeats it and it seems we've entered 22 as the date of month. Moreover, Talkback doesn't automatically read out the display text after check button has been clicked. 
+
+#### Accessibility Scanner
+
+After running the Accessibility Scanner on my app, 3 suggestions were shown. One each for text input i.e `id/editYear`, `id/editMonth`, `id/editDate`. The scanner  suggested to make height of textview input from `45dp` to `48dp`.
 
 ## A.d - Testing
 
