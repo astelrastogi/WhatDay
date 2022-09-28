@@ -16,7 +16,7 @@ Email - f20190175@goa.bits-pilani.ac.in
 
 ## A.b - App Description
 
-This app takes input from the user for a date, and displays the day for that particular date. If the input is invalid, i.e. not in DD-MM-YYYY format, it displays that the input is invalid. The display message is customised for different cases of invalid inputs. For example if user enters 31-09-2903, it will display "This month doesn't have 31 days".
+The app follows the Model View Design (MVC) Pattern. The user interacts with the view to the controller which calls the model and make changes back to the view. It takes input from the user for a date, and displays the day for that particular date. If the input is invalid, i.e. not in DD-MM-YYYY format, it displays that the input is invalid. The display message is customised for different cases of invalid inputs. For example if user enters 31-09-2903, it will display "This month doesn't have 31 days".
 
 ### Known Bugs
 
@@ -47,9 +47,11 @@ Creates `GregorianCalendar` object with given date and returns the index of week
 Used `calendar.setLenient(false)` for strict matching. If set to true (which is by default), Calendar will intelligently guess the possible day even if the input is not in correct format, whereas we don't want that.
 
 ###  Task2
-Removed `android:inputType="date"` from `activity_main.xml` file for modifying the method of input. Earlier only keyboard with numbers used to appear. After removing this line, user can give string input. For example "four" instead of 4. The app will display invalid input method for string inputs.
+1. Removed `android:inputType="date"` from `activity_main.xml` file for modifying the method of input. Earlier only keyboard with numbers used to appear. After removing this line, user can give string input. For example "four" instead of 4. The app will display invalid input method for string inputs.
 
-Also, increased the height of textview inputs to `48dp` from `45dp` as per Accessibility Scanner suggestion. 
+2. Increased the height of textview inputs to `48dp` from `45dp` as per Accessibility Scanner suggestion. 
+
+3. Changed TextContrast for input buttons after running Accessibility Scanner. Made separate hint colors for night and day mode of the app. Used `android:textColorHint="?attr/hintTextColor` in `activity_main.xml` file for textview inputs. Added 2 different colors for hintcolors for night and day mode in `colors.xml` and created a new theme item in `theme.xml` and `theme.xml(night)` 
 
 ###  Task3
 
@@ -62,6 +64,8 @@ It repeats the entered digit twice, which makes entering the exact date confusin
 After running the Accessibility Scanner on my app, 3 suggestions were shown. One each for text input i.e `id/editYear`, `id/editMonth`, `id/editDate`. The scanner  suggested to make height of textview input from `45dp` to `48dp`.
 
 After running the scanner again, post making the aforementioned changes, it suggested more changes. It asked to increase the text inputs' and check button's text foreground to backround contrast ratio. 
+
+Accessibility scanner still shows textContrast issue in night mode for the Check button though. 
 
 ## A.d - Testing
 
