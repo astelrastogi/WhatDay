@@ -61,6 +61,8 @@ It repeats the entered digit twice, which makes entering the exact date confusin
 
 After running the Accessibility Scanner on my app, 3 suggestions were shown. One each for text input i.e `id/editYear`, `id/editMonth`, `id/editDate`. The scanner  suggested to make height of textview input from `45dp` to `48dp`.
 
+After running the scanner again, post making the aforementioned changes, it suggested more changes. It asked to increase the text inputs' and check button's text foreground to backround contrast ratio. 
+
 ## A.d - Testing
 
 Used Test-Driven Approach for coding up the project. Added 2 more unit test cases. They are as follows - 
