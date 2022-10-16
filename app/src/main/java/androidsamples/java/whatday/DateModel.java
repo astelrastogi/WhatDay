@@ -90,6 +90,7 @@ public class DateModel {
     boolean isLeap = false;
     if(checkLeap(year)) {
       isLeap = true;
+
     }
 
     // Validate Month
@@ -109,7 +110,8 @@ public class DateModel {
       }
 
       else {
-        return getDay();
+        return "This is a leap year";
+//        return getDay();
       }
 
     }

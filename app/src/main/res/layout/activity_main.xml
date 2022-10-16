@@ -61,6 +61,7 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
       android:text="@string/check"
+      android:textSize="48sp"
       android:textColor="?attr/textFillColor"
       app:layout_constraintBottom_toTopOf="@+id/txt_display"
       app:layout_constraintEnd_toEndOf="parent"
